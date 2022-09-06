@@ -1,0 +1,189 @@
+@charset "UTF-8";
+/* VARIABLES */
+/* Couleurs */
+/* Couleurs pipette */
+/* Polices */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
+/* Variables */
+/* Couleurs */
+/* Couleurs pipette */
+/* Polices */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
+/* polices */
+/* MIXINS */
+/* mixin pour les étiquettes */
+body.accueil {
+  font-family: "Roboto", serif, comic, arial;
+}
+
+/* HEADER */
+header.header-accueil {
+  text-align: center;
+}
+header.header-accueil img {
+  height: 35px;
+  width: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* MAIN */
+/* section */
+section.section-articleAside {
+  background-color: white;
+}
+
+/* Formulaire */
+form.formulaire {
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  align-items: center;
+}
+form.formulaire input {
+  background-color: #eaeaea;
+  border: 0px;
+  margin: auto;
+}
+form.formulaire i {
+  color: #353535;
+}
+form.formulaire ::placeholder {
+  color: #353535;
+  font-weight: bold;
+}
+
+/* article 1 */
+.article-principal {
+  background-color: #f6f6f6;
+  text-align: center;
+}
+.article-principal__titre {
+  font-weight: bold;
+  font-size: 28px;
+  width: 280px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+.article-principal__baseline {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.article-principal__boutton {
+  background: linear-gradient(170deg, rgb(255, 121, 218) 0%, rgb(203, 104, 219) 38%, rgb(147, 86, 220) 100%);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  height: 50px;
+  width: 210px;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+/* ASIDE */
+.aside-fonctionnement {
+  background-color: antiquewhite;
+}
+.aside-fonctionnement__titre {
+  margin-bottom: 30px;
+}
+
+div.contenaire-etiquette {
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.etiquette {
+  background-color: orange;
+  display: flex;
+  align-items: center;
+  width: 280px;
+  height: 60px;
+  border: solid 2px;
+  border-radius: 20px;
+  padding-right: 40px;
+}
+.etiquette__numero {
+  position: relative;
+  right: 10px;
+  border-radius: 100px;
+  background-color: #9356DC;
+  color: white;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+}
+.etiquette i {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+/* article, restaurants, cards */
+.article-restaurants {
+  background-color: palevioletred;
+}
+.article-restaurants__titre {
+  background-color: #99E2D0;
+  margin-top: 30px;
+}
+
+div.contenairePrincipal {
+  background-color: peru;
+}
+
+/* FOOTER */
+.basdepage {
+  background-color: red;
+  margin-top: 30px;
+}
+.basdepage__titre {
+  font-family: "Shrikhand", serif, comic, arial;
+  background-color: olive;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: initial;
+}
+
+.basdepage-liste {
+  background-color: #FF79DA;
+  text-align: initial;
+}
+
+/* Variable polices */
+body.menu {
+  font-family: "Roboto", serif, comic, arial;
+  text-align: center;
+}
+
+/* HEADER */
+header.header-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header.header-menu i {
+  font-size: 25px;
+  margin-right: 40px;
+  color: #353535;
+  position: relative;
+  top: 6px;
+}
+header.header-menu img {
+  height: 35px;
+  width: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
+/* Le même que sur l'accueil, DRY ;)!*/
+
+/*# sourceMappingURL=style.css.map */

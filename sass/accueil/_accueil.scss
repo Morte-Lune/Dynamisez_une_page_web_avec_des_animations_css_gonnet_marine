@@ -1,0 +1,193 @@
+/* VARIABLES */ 
+/* Couleurs */
+$Primaire: #9356DC;
+$Secondaire: #FF79DA;
+$Tertiaire: #99E2D0;
+/* Couleurs pipette */
+$couleur1: #eaeaea;
+$couleur2: #f6f6f6;
+$couleur3: #353535;
+
+/* Polices */
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+/* polices */
+$logoTitre: 'Shrikhand', serif, comic, arial;
+$texte: 'Roboto', serif, comic, arial;
+/* MIXINS */
+/* mixin pour les étiquettes */
+@mixin etiquettes {
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    width: 280px;
+    height: 60px;
+    border: solid 2px;
+    border-radius: 20px;
+    padding-right: 40px;
+}
+
+@mixin numeros {
+    position: relative;
+    right: 10px;
+    border-radius: 100px;
+    background-color: #9356DC;
+    color: white;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+body.accueil {
+    font-family: $texte;
+}
+
+/* HEADER */
+header.header-accueil {
+    text-align: center;
+    img {
+        height: 35px;
+        width: auto;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+/* MAIN */
+/* section */
+section.section-articleAside {
+    background-color: white;
+}
+   /* Formulaire */
+   form.formulaire {
+    background-color: $couleur1;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    align-items: center;
+    input {
+        background-color: $couleur1;
+        border: 0px;
+        margin: auto;
+    }
+    i {
+        color: #353535;
+    }
+    ::placeholder {
+        color: $couleur3;
+        font-weight: bold;
+    }
+}
+    /* article 1 */ 
+.article-principal {
+    background-color: $couleur2;
+    text-align: center;
+    &__titre {
+        font-weight: bold;
+        font-size: 28px;
+        width: 280px;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+    &__baseline {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    &__boutton {
+        background: linear-gradient(170deg, rgba(255,121,218,1) 0%, rgba(203,104,219,1) 38%, rgba(147,86,220,1) 100%);
+        color: white;
+        border: none;
+        border-radius: 30px;
+        height: 50px;
+        width: 210px;
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+}
+
+/* ASIDE */
+.aside-fonctionnement {
+    background-color: antiquewhite;
+    &__titre {
+        margin-bottom: 30px;
+    }
+}
+
+div.contenaire-etiquette {
+background-color: aqua;
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-bottom: 20px;
+}
+
+.etiquette {
+    @include etiquettes;
+    &__numero {
+    @include numeros;    
+    }
+    i {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* article, restaurants, cards */
+.article-restaurants {
+    background-color: palevioletred;
+    &__titre {
+        background-color: #99E2D0;
+        margin-top: 30px;
+    }
+}
+
+div.contenairePrincipal {
+    background-color: peru;
+}
+
+/* FOOTER */
+.basdepage {
+    background-color: red;
+    margin-top: 30px;
+    &__titre {
+        font-family: $logoTitre;
+        background-color: olive;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: initial;
+    }
+}
+
+.basdepage-liste {
+    background-color: #FF79DA;
+    text-align: initial;
+}

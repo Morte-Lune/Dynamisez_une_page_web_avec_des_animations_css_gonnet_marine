@@ -1,0 +1,44 @@
+/* Variables */ 
+/* Couleurs */
+$Primaire: #9356DC;
+$Secondaire: #FF79DA;
+$Tertiaire: #99E2D0;
+/* Couleurs pipette */
+$couleur1: #eaeaea;
+$couleur2: #f6f6f6;
+$couleur3: #353535;
+
+/* Polices */
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+/* Variable polices */
+$logoTitre: 'Shrikhand', serif, comic, arial;
+$texte: 'Roboto', serif, comic, arial;
+
+body.menu {
+    font-family: $texte;
+    text-align: center;
+}
+
+/* HEADER */
+header.header-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i {
+        font-size: 25px;
+        margin-right: 40px;
+        color: $couleur3;
+        position: relative;
+        top: 6px;
+    }
+    img {
+        height: 35px;
+        width: auto;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+/* FOOTER */
+/* Le même que sur l'accueil, DRY ;)!*/
