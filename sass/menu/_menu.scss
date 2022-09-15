@@ -1,4 +1,15 @@
-/* Variables */ 
+/* URL POLICES */
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
+
+
+/* VATIABLES */ 
+
+/* polices */
+$logoTitre: 'Shrikhand', serif, comic, arial;
+$texte: 'Roboto', serif, comic, arial;
+
 /* Couleurs */
 $Primaire: #9356DC;
 $Secondaire: #FF79DA;
@@ -8,29 +19,92 @@ $couleur1: #eaeaea;
 $couleur2: #f6f6f6;
 $couleur3: #353535;
 
-/* Polices */
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
-/* Variable polices */
-$logoTitre: 'Shrikhand', serif, comic, arial;
-$texte: 'Roboto', serif, comic, arial;
+/* MAPS */
 
+/* Taille police */
+$font-size: ( h1h2: 22px, h3BaselineForm: 18px, etiquetteBouton: 17px, footerNouveau: 16px);
+
+/* MIXINS */
+
+/* mixin Box Shadow */
+@mixin ombres {
+    box-shadow: lighten($couleur3, 55%) 0px 4px 8px;
+}
+
+@mixin ombresFoncé {
+    box-shadow: lighten($couleur3, 20%) 0px 4px 8px;
+}
+
+/* mixin Bouton */
+@mixin bouton2 {
+    background: linear-gradient(170deg, rgba(255,121,218,1) 0%, rgba(203,104,219,1) 38%, rgba(147,86,220,1) 100%);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    height: 50px;
+    width: 180px;
+    font-size: map-get($font-size, etiquetteBouton);
+}
+
+/* mixin Bouton survol */
+@mixin boutonSurvol2 {
+    background: linear-gradient(170deg, rgb(255, 180, 234) 0%, rgba(200,141,217,1) 38%, rgba(172,127,226,1) 100%);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    height: 50px;
+    width: 180px;
+    font-size: map-get($font-size, etiquetteBouton);
+}
+
+/*****************************************************************/
+/* BODY IMAGES DE FOND */
+/*1*/
 body.menu {
     font-family: $texte;
-    text-align: center;
+    background-image: url(../../images/restaurants/ALaFrancaise.jpg);
+    background-repeat: no-repeat;
+    background-size: 105%;
+    background-position: 0px 65px;
 }
+/*1*/
+body.menu1 {
+font-family: $texte;   
+background-image: url(../../images/restaurants/LaPaletteDuGout.jpg);
+background-repeat: no-repeat;
+background-size: 105%;
+background-position: 0px 65px;
+}
+/*2*/
+body.menu2 {
+    font-family: $texte;   
+    background-image: url(../../images/restaurants/LaNoteEnchantée.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0px -50px;
+    }
+/*3*/
+body.menu3 {
+    font-family: $texte;   
+    background-image: url(../../images/restaurants/LedéliceDesSens.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0px 50px;
+    }
 
 /* HEADER */
 header.header-menu {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
     i {
         font-size: 25px;
-        margin-right: 40px;
+        margin-right: 0px;
         color: $couleur3;
         position: relative;
         top: 6px;
+        right: 70px;
     }
     img {
         height: 35px;
@@ -40,5 +114,123 @@ header.header-menu {
     }
 }
 
+/* SECTION */
+.contenaire-restau {
+    background-color: rgb(240, 238, 238);
+    border-radius: 40px 40px 0px 0px;
+    margin-top: 220px;
+    &__bouton {
+        @include bouton2;
+        @include ombres;
+        margin: auto;
+        display: block;
+        margin-top: 50px;
+    }
+    &__bouton:hover {
+        cursor: pointer;
+        @include boutonSurvol2;
+        @include ombresFoncé;
+    }
+}
+
+div.espace {
+    padding-bottom: 80px;
+}
+
+/* ARTICLE ENTREE 1*/
+.article-entrees {
+    width: max-content;
+    margin: auto;
+    &__titre1 {
+        font-family: $logoTitre;
+        font-size: 30px;
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        i {
+            font-size: 27px;
+            padding-right: 20px;
+        }
+    }
+    &__titre {
+        font-size: 18px;
+        margin-top: 40px;
+        margin-bottom: 5px;
+    }
+    .surligne {
+        border-top: 3.5px solid $Tertiaire;
+        width: 45px;
+        margin-bottom: 20px;
+    }
+}
+
+.etiquettes {
+    background-color: white;
+    @include ombres;
+    height: 70px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 350px;
+    &__titre {
+        font-weight: bold;
+        font-size: map-get($font-size, h3BaselineForm);
+        margin-left: 10px;
+    }
+    &__baseline {
+        margin-left: 10px;
+        line-height: 25px;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 20px;
+    }
+}
+
+/* ARTICLE PLATS 2 */
+.article-plats {
+    width: max-content;
+    margin: auto;
+    &__titre1 {
+        font-family: $logoTitre;
+        font-size: 30px;
+        margin-top: 40px;
+    }
+    &__titre {
+        font-size: 18px;
+        margin-top: 40px;
+        margin-bottom: 5px;
+    }
+    .surligne {
+        border-top: 3.5px solid $Tertiaire;
+        width: 45px;
+        margin-bottom: 20px;
+    }
+}
+
+/* ASIDE DESSERTS */
+.aside-desserts {
+    width: max-content;
+    margin: auto;
+    &__titre1 {
+        font-family: $logoTitre;
+        font-size: 30px;
+        margin-top: 40px;
+    }
+    &__titre {
+        font-size: 18px;
+        margin-top: 40px;
+        margin-bottom: 5px;
+    }
+    .surligne {
+        border-top: 3.5px solid $Tertiaire;
+        width: 45px;
+        margin-bottom: 20px;
+    }
+}
+
 /* FOOTER */
+
 /* Le même que sur l'accueil, DRY ;)!*/
