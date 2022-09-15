@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ohmyfood</title>
     <!-- Lien Favicon-->
-    <link rel="icon" type="favicon" href="./o.ico">
+    <link rel="icon" href="./o.ico">
     <!--Fichier Normalize-->
     <link rel="stylesheet" href="./public/css/normalize.css">
     <!--Lien FontAwesome-->
@@ -40,28 +40,30 @@
         </article>
         <!--ASIDE-->
         <aside class="aside-fonctionnement">
+            <h2 class="aside-fonctionnement__titre">Fonctionnement</h2>
+            <div class="contenaire-etiquettesPrincipal">
                 <div class="contenaire-etiquette">
-                    <h2 class="contenaire-etiquette__titre">Fonctionnement</h2>
-                    <h3 class="etiquette">
+                    <div class="etiquette">
                         <div class="etiquette__numero">1</div>
                         <i class="fa-solid fa-mobile-screen-button"></i>
-                        Choisissez un restaurant
-                    </h3>
+                        <h3>Choisissez un restaurant</h3>
+                    </div>
                 </div>
                 <div class="contenaire-etiquette">
-                    <h3 class="etiquette">
+                    <div class="etiquette">
                         <div class="etiquette__numero">2</div>
                         <i class="fa-solid fa-list-ul"></i>
-                        Composez votre menu
-                    </h3>
+                        <h3>Composez votre menu</h3>
+                    </div>
                 </div>
                 <div class="contenaire-etiquette">
-                    <h3 class="etiquette">
+                    <div class="etiquette">
                         <div class="etiquette__numero">3</div>
                         <i class="fa-solid fa-store"></i>
-                        Dégustez au restaurant
-                    </h3>
+                        <h3>Dégustez au restaurant</h3>
+                    </div>
                 </div>
+            </div>    
         </aside>
     </section>
         <!--ARTICLE restaurants, cards-->
@@ -69,29 +71,37 @@
             <div class="contenairePrincipal"><!--contenaire principal-->
                 <h2 class="contenairePrincipal__titre">Restaurants</h2>
                  <!--card 1-->
+            <a href="./html/menu1.html">
                 <div class="card">
                     <div class="card__img"><img src="./images/restaurants/LaPaletteDuGout.jpg" alt="assiette remplie"><div class="nouveau">Nouveau</div></div>
-                    <h3 class="card__titre">La palette du goût <i class="fa-regular fa-heart"></i> </h3> 
+                    <h3 class="card__titre">La palette du goût <div class="coeur"><i class="fa-regular fa-heart"></i></div> </h3> 
                     <div class="card__lieu">Ménilmontant</div>
                 </div>
+            </a>
                 <!--card 2-->
+            <a href="./html/menu2.html">
                 <div class="card">
-                    <div class="card__img"><img src="./images/restaurants/LaNoteEnchantée.jpg" alt="assiette remplie"><div class="nouveau">Nouveau</div></div>
+                    <div class="card__img"><img src="./images/restaurants/LaNoteEnchantée.jpg" alt="assiette remplie" class="vertical"><div class="nouveau">Nouveau</div></div>
                     <h3 class="card__titre">La note enchantée <i class="fa-regular fa-heart"></i> </h3>
                     <div class="card__lieu">Charonne</div>
                 </div>
+            </a>    
                 <!--card 3-->
+            <a href="./html/menu3.html">    
                 <div class="card">
                     <div class="card__img"><img src="./images/restaurants/ALaFrancaise.jpg" alt="assiette remplie"></div>
-                    <h3 class="card__titre">A la française <i class="fa-regular fa-heart"></i> </h3> 
+                    <h3 class="card__titre">À la française <i class="fa-regular fa-heart"></i> </h3> 
                     <div class="card__lieu">Cité Rouge</div>
                 </div>
+            </a>   
                 <!--card 4-->
+            <a href="./html/menu4.html">
                 <div class="card">
                     <div class="card__img"><img src="./images/restaurants/LedéliceDesSens.jpg" alt="assiette remplie"></div>
                     <h3 class="card__titre">Le délice des sens <i class="fa-regular fa-heart"></i> </h3> 
                     <div class="card__lieu">Folie-Méricourt</div>
                 </div>
+            </a>
             </div> <!--Div fermante contenaire principal!-->
         </article>
 </main>
