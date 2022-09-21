@@ -19,7 +19,7 @@
 /* mixin Bouton survol */
 /*             (\_/)
                ( •,•)
-               (")_(")       Fin !                                                                   */
+               (")_(")        !*/
 /* BODY */
 body.accueil {
   font-family: "Roboto", serif, comic, arial;
@@ -96,7 +96,7 @@ form.formulaire ::placeholder {
 
 /* article 1 */
 .article-principal {
-  background-color: #f9f9f9;
+  background-color: #f4f4f4;
   text-align: center;
 }
 @media only screen and (min-width: 992px) {
@@ -127,10 +127,13 @@ form.formulaire ::placeholder {
 }
 @media only screen and (min-width: 992px) {
   .article-principal__titre {
-    color: #93006a;
+    color: #541f94;
+    font-family: "Shrikhand", serif, comic, arial;
     font-size: 40px;
     margin-top: 60px;
+    margin-left: 10px;
     margin-bottom: 0px;
+    text-align: left;
   }
 }
 .article-principal__baseline {
@@ -141,10 +144,12 @@ form.formulaire ::placeholder {
 }
 @media only screen and (min-width: 992px) {
   .article-principal__baseline {
+    color: #541f94;
     font-size: 22px;
-    line-height: 25px;
+    line-height: 30px;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 15px;
+    margin-left: 5px;
   }
 }
 .article-principal__bouton {
@@ -152,11 +157,11 @@ form.formulaire ::placeholder {
   color: white;
   border: none;
   border-radius: 30px;
-  height: 50px;
+  height: 56px;
   width: 220px;
   font-size: 17px;
-  margin-bottom: 40px;
-  box-shadow: #c1c1c1 0px 4px 8px;
+  box-shadow: #dbdbdb 0px 4px 8px;
+  margin-bottom: 50px;
 }
 .article-principal__bouton:hover {
   cursor: pointer;
@@ -164,10 +169,9 @@ form.formulaire ::placeholder {
   color: white;
   border: none;
   border-radius: 30px;
-  height: 50px;
+  height: 56px;
   width: 220px;
   font-size: 17px;
-  margin-bottom: 40px;
   box-shadow: #686868 0px 4px 8px;
 }
 
@@ -198,7 +202,7 @@ form.formulaire ::placeholder {
   .aside-fonctionnement__titre {
     text-align: center;
     margin-top: 0px;
-    padding-top: 10px;
+    padding-top: 15px;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -222,6 +226,7 @@ form.formulaire ::placeholder {
     display: flex;
     justify-content: space-between;
     background-color: #c1ede2;
+    padding-bottom: 15px;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -243,7 +248,7 @@ form.formulaire ::placeholder {
   font-weight: bold;
   font-size: 18px;
   background-color: #f4f4f4;
-  box-shadow: #c1c1c1 0px 4px 8px;
+  box-shadow: #dbdbdb 0px 4px 8px;
   display: flex;
   align-items: center;
   width: 350px;
@@ -256,18 +261,19 @@ form.formulaire ::placeholder {
 }
 @media only screen and (min-width: 768px) {
   .etiquette {
-    font-size: 17px;
+    font-size: 16px;
     background-color: #f4f4f4;
-    box-shadow: #c1c1c1 0px 4px 8px;
+    box-shadow: #dbdbdb 0px 4px 8px;
     display: flex;
     align-items: center;
-    width: 250px;
-    height: 70px;
+    width: 230px;
+    height: 50px;
     border-radius: 30px;
   }
   .etiquette i {
     color: #828282;
-    padding-right: 5px;
+    padding-right: 10px;
+    padding-left: 5px;
   }
 }
 .etiquette__numero {
@@ -276,11 +282,12 @@ form.formulaire ::placeholder {
   border-radius: 100px;
   background-color: #9356DC;
   color: white;
-  font-size: 16px;
-  width: 20px;
-  height: 20px;
+  font-size: 15px;
+  width: 27px;
+  height: 27px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 @media only screen and (min-width: 768px) {
   .etiquette__numero {
@@ -295,11 +302,12 @@ form.formulaire ::placeholder {
     border-radius: 100px;
     background-color: #9356DC;
     color: white;
-    font-size: 16px;
-    width: 20px;
-    height: 20px;
+    font-size: 15px;
+    width: 27px;
+    height: 27px;
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 }
 .etiquette i {
@@ -337,8 +345,10 @@ form.formulaire ::placeholder {
   display: flex;
   flex-direction: column;
   margin: auto;
+  margin-top: 50px;
   width: max-content;
-  padding-bottom: 50px;
+  row-gap: 20px;
+  padding-bottom: 80px;
 }
 @media only screen and (min-width: 768px) {
   .contenairePrincipal {
@@ -346,18 +356,19 @@ form.formulaire ::placeholder {
     width: 700px;
     flex-wrap: wrap;
     justify-content: space-around;
+    row-gap: 50px;
   }
 }
 @media only screen and (min-width: 992px) {
   .contenairePrincipal {
     width: 970px;
+    row-gap: 35px;
   }
 }
 .contenairePrincipal__titre {
   font-size: 25px;
   font-weight: bold;
   margin-top: 40px;
-  margin-bottom: 30px;
   width: 100%;
 }
 @media only screen and (min-width: 768px) {
@@ -375,16 +386,14 @@ form.formulaire ::placeholder {
 
 /* CARTES */
 .card {
-  box-shadow: #c1c1c1 0px 4px 8px;
+  box-shadow: #dbdbdb 0px 4px 8px;
   width: 350px;
   border-radius: 20px 20px 20px 20px;
-  margin-bottom: 20px; /* Regarder le margin des etiquettes*/
   background-color: white;
 }
 @media only screen and (min-width: 768px) {
   .card {
     width: 300px;
-    margin-bottom: 55px;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -448,26 +457,55 @@ form.formulaire ::placeholder {
     left: 350px;
   }
 }
-.card__titre {
-  font-weight: bold;
-  font-size: 19px;
-  margin-top: 20px;
-  margin-left: 15px;
-  display: flex;
-  justify-content: space-between;
-}
-.card__titre i {
-  margin-right: 20px;
-  font-size: 25px;
-}
-.card__titre i:hover {
-  cursor: pointer;
-  background-color: red;
-}
 .card__lieu {
   padding-bottom: 10px;
   font-size: 19px;
   margin-left: 15px;
+  line-height: 30px;
+}
+
+/* Positionnement titre et coeur en display */
+.titre-coeur {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+.titre-coeur__titre {
+  font-weight: bold;
+  font-size: 19px;
+  margin-left: 15px;
+}
+
+/* Bouton coeur */
+.coeur-bouton {
+  display: flex;
+  width: max-content;
+}
+.coeur-bouton__rempli {
+  font-size: 26px;
+  background: linear-gradient(170deg, rgb(255, 180, 234) 0%, rgb(200, 141, 217) 38%, rgb(172, 127, 226) 100%);
+  /*webkit permet d'appliquer le gradient sur l'îcone qui est du texte */
+  -webkit-background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transition: 1s;
+  position: relative;
+  right: 25px;
+  z-index: 0;
+}
+.coeur-bouton__contour {
+  font-size: 26px;
+  transition: 0.5s;
+  z-index: 1;
+}
+.coeur-bouton__contour:hover + .coeur-bouton__rempli {
+  opacity: 1;
+}
+.coeur-bouton__contour:hover {
+  cursor: pointer;
+  opacity: 0;
 }
 
 /* CARTE CLIQUABLE */
@@ -504,6 +542,9 @@ a {
   margin: auto;
   line-height: 30px;
 }
+.basdepage-liste i:hover {
+  cursor: pointer;
+}
 @media only screen and (min-width: 768px) {
   .basdepage-liste {
     width: 100%;
@@ -520,7 +561,7 @@ a {
   margin-right: 8px;
 }
 
-/* VATIABLES */
+/* VARIABLES */
 /* polices */
 /* Couleurs */
 /* Couleurs pipette */
@@ -546,7 +587,8 @@ body.menu1 {
   font-family: "Roboto", serif, comic, arial;
   background-image: url(../../images/restaurants/LaPaletteDuGout.jpg);
   background-repeat: no-repeat;
-  background-size: 105%;
+  background-size: 100%;
+  height: auto;
   background-position: 0px 65px;
 }
 
@@ -590,7 +632,8 @@ header.header-menu img {
   margin-bottom: 10px;
 }
 
-/* SECTION */
+/* MAIN */
+/* Main, fond gris, bouton */
 .contenaire-restau {
   background-color: rgb(240, 238, 238);
   border-radius: 40px 40px 0px 0px;
@@ -621,48 +664,99 @@ header.header-menu img {
   box-shadow: #686868 0px 4px 8px;
 }
 
+/* Espace bouton */
 div.espace {
   padding-bottom: 80px;
 }
 
-/* ARTICLE ENTREE 1*/
-.article-entrees {
+/* GRAND CONTENAIRE */
+/* Bouton coeur */
+.coeur-bouton {
+  display: flex;
   width: max-content;
-  margin: auto;
 }
-.article-entrees__titre1 {
-  font-family: "Shrikhand", serif, comic, arial;
-  font-size: 30px;
+.coeur-bouton__rempli {
+  font-size: 26px;
+  background: linear-gradient(170deg, rgb(255, 180, 234) 0%, rgb(200, 141, 217) 38%, rgb(172, 127, 226) 100%);
+  /*webkit permet d'appliquer le gradient sur l'îcone qui est du texte */
+  -webkit-background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transition: 1s;
+  position: relative;
+  right: 25px;
+  z-index: 0;
+}
+.coeur-bouton__contour {
+  font-size: 26px;
+  transition: 0.5s;
+  z-index: 1;
+}
+.coeur-bouton__contour:hover + .coeur-bouton__rempli {
+  opacity: 1;
+}
+.coeur-bouton__contour:hover {
+  cursor: pointer;
+  opacity: 0;
+}
+
+.titreCoeur {
   padding-top: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.article-entrees__titre1 i {
+
+.contenaire-principal {
+  width: max-content;
+  margin: auto;
+}
+.contenaire-principal__titre {
+  font-family: "Shrikhand", serif, comic, arial;
+  font-size: 30px;
+}
+@media only screen and (min-width: 768px) {
+  .contenaire-principal__titre {
+    width: max-content;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+}
+.contenaire-principal__titre i {
   font-size: 27px;
   padding-right: 20px;
 }
-.article-entrees__titre {
-  font-size: 18px;
-  margin-top: 40px;
-  margin-bottom: 5px;
-}
-.article-entrees .surligne {
-  border-top: 3.5px solid #99E2D0;
-  width: 45px;
-  margin-bottom: 20px;
+@media only screen and (min-width: 768px) {
+  .contenaire-principal__titre i {
+    padding-left: 20px;
+  }
 }
 
+/* Etiquettes */
 .etiquettes {
   background-color: white;
   box-shadow: #c1c1c1 0px 4px 8px;
   height: 70px;
+  width: 365px;
   border-radius: 15px;
   margin-bottom: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 350px;
+}
+.etiquettes :hover {
+  cursor: pointer;
+}
+@media only screen and (min-width: 768px) {
+  .etiquettes {
+    width: 330px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .etiquettes {
+    width: 300px;
+  }
 }
 .etiquettes__titre {
   font-weight: bold;
@@ -677,48 +771,148 @@ div.espace {
   margin-right: 20px;
 }
 
-/* ARTICLE PLATS 2 */
-.article-plats {
-  width: max-content;
-  margin: auto;
+/* Etiquette poulet roti plus large sur la maquette */
+div.etiquette-poulet {
+  background-color: white;
+  box-shadow: #c1c1c1 0px 4px 8px;
+  height: 85px;
+  width: 365px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.article-plats__titre1 {
-  font-family: "Shrikhand", serif, comic, arial;
-  font-size: 30px;
-  margin-top: 40px;
+
+/* ENTREE */
+@media only screen and (min-width: 992px) {
+  .entrees {
+    margin-right: 20px;
+  }
 }
-.article-plats__titre {
+.entrees__titre {
   font-size: 18px;
   margin-top: 40px;
   margin-bottom: 5px;
 }
-.article-plats .surligne {
+@media only screen and (min-width: 768px) {
+  .entrees__titre {
+    margin-top: 20px;
+  }
+}
+.entrees__surligne {
   border-top: 3.5px solid #99E2D0;
   width: 45px;
   margin-bottom: 20px;
 }
 
-/* ASIDE DESSERTS */
-.aside-desserts {
-  width: max-content;
-  margin: auto;
+/* PLATS */
+@media only screen and (min-width: 992px) {
+  .plats {
+    margin-right: 20px;
+  }
 }
-.aside-desserts__titre1 {
-  font-family: "Shrikhand", serif, comic, arial;
-  font-size: 30px;
-  margin-top: 40px;
-}
-.aside-desserts__titre {
+.plats__titre {
   font-size: 18px;
-  margin-top: 40px;
+  margin-top: 30px;
   margin-bottom: 5px;
 }
-.aside-desserts .surligne {
+@media only screen and (min-width: 768px) {
+  .plats__titre {
+    margin-top: 20px;
+  }
+}
+.plats__surligne {
   border-top: 3.5px solid #99E2D0;
   width: 45px;
   margin-bottom: 20px;
 }
 
+/* DESSERTS */
+.desserts__titre {
+  font-size: 18px;
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+@media only screen and (min-width: 768px) {
+  .desserts__titre {
+    margin-top: 20px;
+  }
+}
+.desserts__surligne {
+  border-top: 3.5px solid #99E2D0;
+  width: 45px;
+  margin-bottom: 20px;
+}
+
+/* Contenaire Flex pour le format tablette & Desktop */
+@media only screen and (min-width: 768px) {
+  div.contenaire-flex {
+    width: 760px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  div.contenaire-flex {
+    width: 940px;
+    padding: 0px;
+    justify-content: center;
+  }
+}
+
+/* Animation entrees */
+div.animation1 {
+  animation: entrees linear 1s;
+}
+
+@keyframes entrees {
+  0% {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+/* Animation plats */
+div.animation2 {
+  animation: plats linear 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+
+@keyframes plats {
+  0% {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+/*Animation desserts */
+div.animation3 {
+  animation: plats linear 1s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes desserts {
+  0% {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 /* FOOTER */
 /* Le même que sur l'accueil, DRY ;)!*/
 
