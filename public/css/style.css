@@ -573,26 +573,16 @@ a {
 /* mixin Bouton survol */
 /*****************************************************************/
 /* BODY IMAGES DE FOND */
-/*1*/
-body.menu {
-  font-family: "Roboto", serif, comic, arial;
-  background-image: url(../../images/restaurants/ALaFrancaise.jpg);
-  background-repeat: no-repeat;
-  background-size: 105%;
-  background-position: 0px 65px;
-}
-
-/*1*/
+/* La palette du gout */
 body.menu1 {
   font-family: "Roboto", serif, comic, arial;
   background-image: url(../../images/restaurants/LaPaletteDuGout.jpg);
-  background-repeat: no-repeat;
   background-size: 100%;
-  height: auto;
-  background-position: 0px 65px;
+  background-repeat: no-repeat;
+  background-position: 0px 35px;
 }
 
-/*2*/
+/* La note enchantée */
 body.menu2 {
   font-family: "Roboto", serif, comic, arial;
   background-image: url(../../images/restaurants/LaNoteEnchantée.jpg);
@@ -601,7 +591,16 @@ body.menu2 {
   background-position: 0px -50px;
 }
 
-/*3*/
+/*A la française */
+body.menu {
+  font-family: "Roboto", serif, comic, arial;
+  background-image: url(../../images/restaurants/ALaFrancaise.jpg);
+  background-repeat: no-repeat;
+  background-size: 105%;
+  background-position: 0px 65px;
+}
+
+/*Le délice des Sens */
 body.menu3 {
   font-family: "Roboto", serif, comic, arial;
   background-image: url(../../images/restaurants/LedéliceDesSens.jpg);
@@ -638,6 +637,7 @@ header.header-menu img {
   background-color: rgb(240, 238, 238);
   border-radius: 40px 40px 0px 0px;
   margin-top: 220px;
+  width: 100%;
 }
 .contenaire-restau__bouton {
   background: linear-gradient(170deg, rgb(255, 121, 218) 0%, rgb(203, 104, 219) 38%, rgb(147, 86, 220) 100%);
@@ -677,7 +677,7 @@ div.espace {
 }
 .coeur-bouton__rempli {
   font-size: 26px;
-  background: linear-gradient(170deg, rgb(255, 180, 234) 0%, rgb(200, 141, 217) 38%, rgb(172, 127, 226) 100%);
+  background: linear-gradient(25deg, rgb(255, 180, 234) 0%, rgb(236, 168, 232) 26%, rgb(172, 127, 226) 83%);
   /*webkit permet d'appliquer le gradient sur l'îcone qui est du texte */
   -webkit-background-clip: border-box;
   -webkit-background-clip: text;
@@ -704,90 +704,132 @@ div.espace {
 .titreCoeur {
   padding-top: 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+}
+@media only screen and (min-width: 768px) {
+  .titreCoeur {
+    margin-bottom: 50px;
+  }
 }
 
 .contenaire-principal {
   width: max-content;
   margin: auto;
 }
+@media only screen and (min-width: 992px) {
+  .contenaire-principal {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 40px 40px 0px 0px;
+  }
+}
 .contenaire-principal__titre {
   font-family: "Shrikhand", serif, comic, arial;
   font-size: 30px;
-}
-@media only screen and (min-width: 768px) {
-  .contenaire-principal__titre {
-    width: max-content;
-    margin: auto;
-    margin-bottom: 30px;
-  }
+  margin-right: 30px;
 }
 .contenaire-principal__titre i {
   font-size: 27px;
-  padding-right: 20px;
-}
-@media only screen and (min-width: 768px) {
-  .contenaire-principal__titre i {
-    padding-left: 20px;
-  }
 }
 
-/* Etiquettes */
-.etiquettes {
+/* ETIQUETTES + animations */
+.etiquette-principale {
   background-color: white;
   box-shadow: #c1c1c1 0px 4px 8px;
-  height: 70px;
-  width: 365px;
-  border-radius: 15px;
   margin-bottom: 15px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.etiquettes :hover {
+  border-radius: 15px;
+  overflow: hidden;
   cursor: pointer;
 }
+.etiquette-principale:hover > .etiquette-principale__encoche {
+  margin-right: 0px;
+  color: white;
+}
+.etiquette-principale:hover .etiquette-principale__icone {
+  color: white;
+  transition: transform ease-in-out 1s;
+  transform: rotate(1turn);
+}
+.etiquette-principale .etiquettes {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 15px;
+  font-family: "Roboto", serif, comic, arial;
+  font-size: 16px;
+  line-height: 22px;
+}
+.etiquette-principale .etiquettes__titre {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: 18px;
+}
+.etiquette-principale .etiquettes__baseline {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: "Roboto", serif, comic, arial;
+}
+.etiquette-principale__prix {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-weight: bold;
+  padding-right: 20px;
+  padding-bottom: 15px;
+}
+.etiquette-principale__encoche {
+  background-color: #99E2D0;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 1s;
+  margin-right: -60px;
+}
+.etiquette-principale__icone {
+  color: white;
+  font-size: 20px;
+}
+
+/* Contenaire Flex pour le format tablette & Desktop */
 @media only screen and (min-width: 768px) {
-  .etiquettes {
-    width: 330px;
+  div.contenaire-flex {
+    width: 760px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 @media only screen and (min-width: 992px) {
-  .etiquettes {
-    width: 300px;
+  div.contenaire-flex {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
   }
-}
-.etiquettes__titre {
-  font-weight: bold;
-  font-size: 18px;
-  margin-left: 10px;
-}
-.etiquettes__baseline {
-  margin-left: 10px;
-  line-height: 25px;
-  display: flex;
-  justify-content: space-between;
-  margin-right: 20px;
-}
-
-/* Etiquette poulet roti plus large sur la maquette */
-div.etiquette-poulet {
-  background-color: white;
-  box-shadow: #c1c1c1 0px 4px 8px;
-  height: 85px;
-  width: 365px;
-  border-radius: 15px;
-  margin-bottom: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 /* ENTREE */
+.entrees {
+  width: 360px;
+}
 @media only screen and (min-width: 992px) {
   .entrees {
-    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+    width: 350px;
   }
 }
 .entrees__titre {
@@ -807,9 +849,15 @@ div.etiquette-poulet {
 }
 
 /* PLATS */
+.plats {
+  width: 360px;
+  margin: auto;
+}
 @media only screen and (min-width: 992px) {
   .plats {
-    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
   }
 }
 .plats__titre {
@@ -829,6 +877,16 @@ div.etiquette-poulet {
 }
 
 /* DESSERTS */
+.desserts {
+  width: 360px;
+  margin: auto;
+}
+@media only screen and (min-width: 992px) {
+  .desserts {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .desserts__titre {
   font-size: 18px;
   margin-top: 30px;
@@ -843,25 +901,6 @@ div.etiquette-poulet {
   border-top: 3.5px solid #99E2D0;
   width: 45px;
   margin-bottom: 20px;
-}
-
-/* Contenaire Flex pour le format tablette & Desktop */
-@media only screen and (min-width: 768px) {
-  div.contenaire-flex {
-    width: 760px;
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: space-between;
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-}
-@media only screen and (min-width: 992px) {
-  div.contenaire-flex {
-    width: 940px;
-    padding: 0px;
-    justify-content: center;
-  }
 }
 
 /* Animation entrees */
