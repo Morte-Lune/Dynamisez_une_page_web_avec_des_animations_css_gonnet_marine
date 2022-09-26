@@ -14,6 +14,7 @@
 /* MIXINS */
 /* mixin pour les étiquettes */
 /* mixin pour les étiquettes tablette */
+/* mixin pour les étiquettes desktop */
 /* mixin Box Shadow */
 /* mixin Bouton */
 /* mixin Bouton survol */
@@ -30,6 +31,50 @@ body.accueil {
   }
 }
 
+/* LOADER SPINNER */
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.829);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: apparition 0s 2s linear;
+  animation-fill-mode: both;
+}
+.loader__cercle {
+  content: " ";
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 15px solid #9356DC;
+  border-color: #9356DC transparent #99E2D0 transparent;
+  animation: spinner 1.2s linear infinite;
+}
+
+/* KEYFRAMES */
+@keyframes spinner {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+@keyframes apparition {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
 /* HEADER */
 header.header-accueil {
   text-align: center;
@@ -266,7 +311,24 @@ form.formulaire ::placeholder {
     box-shadow: #dbdbdb 0px 4px 8px;
     display: flex;
     align-items: center;
-    width: 230px;
+    width: 240px;
+    height: 50px;
+    border-radius: 30px;
+  }
+  .etiquette i {
+    color: #828282;
+    padding-right: 10px;
+    padding-left: 5px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .etiquette {
+    font-size: 16px;
+    background-color: #f4f4f4;
+    box-shadow: #dbdbdb 0px 4px 8px;
+    display: flex;
+    align-items: center;
+    width: 255px;
     height: 50px;
     border-radius: 30px;
   }
@@ -514,6 +576,12 @@ a {
   color: black;
 }
 
+@media only screen and (min-width: 768px) {
+  a:hover {
+    color: #9356DC;
+  }
+}
+
 /* FOOTER */
 .basdepage {
   background-color: #353535;
@@ -542,8 +610,17 @@ a {
   margin: auto;
   line-height: 30px;
 }
-.basdepage-liste i:hover {
+.basdepage-liste i {
+  font-size: 15px;
+  margin-right: 8px;
+}
+.basdepage-liste a {
+  text-decoration: none;
+  color: white;
+}
+.basdepage-liste a:hover {
   cursor: pointer;
+  text-decoration: underline;
 }
 @media only screen and (min-width: 768px) {
   .basdepage-liste {
@@ -551,14 +628,9 @@ a {
     display: flex;
     justify-content: space-around;
   }
-}
-.basdepage-liste a {
-  text-decoration: none;
-  color: white;
-}
-.basdepage-liste i {
-  font-size: 15px;
-  margin-right: 8px;
+  .basdepage-liste a:hover {
+    color: #FF79DA;
+  }
 }
 
 /* VARIABLES */
@@ -579,7 +651,8 @@ body.menu1 {
   background-image: url(../../images/restaurants/LaPaletteDuGout.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
-  background-position: 0px 35px;
+  background-position: 0px 60px;
+  background-color: aqua;
 }
 
 /* La note enchantée */
@@ -637,7 +710,7 @@ header.header-menu img {
   background-color: rgb(240, 238, 238);
   border-radius: 40px 40px 0px 0px;
   margin-top: 220px;
-  width: 100%;
+  max-width: 100%;
 }
 .contenaire-restau__bouton {
   background: linear-gradient(170deg, rgb(255, 121, 218) 0%, rgb(203, 104, 219) 38%, rgb(147, 86, 220) 100%);
