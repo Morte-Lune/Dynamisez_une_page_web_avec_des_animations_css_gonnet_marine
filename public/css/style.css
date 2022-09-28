@@ -558,7 +558,7 @@ form.formulaire ::placeholder {
 }
 .coeur-bouton__rempli {
   font-size: 26px;
-  background: linear-gradient(170deg, rgb(255, 180, 234) 0%, rgb(200, 141, 217) 38%, rgb(172, 127, 226) 100%);
+  background: linear-gradient(25deg, rgb(255, 180, 234) 0%, rgb(236, 168, 232) 26%, rgb(172, 127, 226) 83%);
   /*webkit permet d'appliquer le gradient sur l'îcone qui est du texte */
   -webkit-background-clip: border-box;
   -webkit-background-clip: text;
@@ -566,7 +566,7 @@ form.formulaire ::placeholder {
   opacity: 0;
   transition: 1s;
   position: relative;
-  right: 25px;
+  right: 26px;
   z-index: 0;
 }
 .coeur-bouton__contour {
@@ -661,36 +661,40 @@ a {
 body.menu1 {
   font-family: Roboto, arial, comic;
   background-image: url(../../images/restaurants/LaPaletteDuGout.jpg);
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: 0px 60px;
+  background-position: center center;
+  height: 350px;
 }
 
 /* La note enchantée */
 body.menu2 {
   font-family: Roboto, arial, comic;
   background-image: url(../../images/restaurants/LaNoteEnchantée.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: 0px -50px;
+  background-position: center -50px;
+  height: 350px;
 }
 
 /*A la française */
-body.menu {
+body.menu3 {
   font-family: Roboto, arial, comic;
   background-image: url(../../images/restaurants/ALaFrancaise.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
-  background-size: 105%;
-  background-position: 0px 65px;
+  background-position: center;
+  height: 350px;
 }
 
 /*Le délice des Sens */
-body.menu3 {
+body.menu4 {
   font-family: Roboto, arial, comic;
   background-image: url(../../images/restaurants/LedéliceDesSens.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: 0px 50px;
+  background-position: center;
+  height: 350px;
 }
 
 /* HEADER */
@@ -769,7 +773,7 @@ div.espace {
   opacity: 0;
   transition: 1s;
   position: relative;
-  right: 25px;
+  right: 26px;
   z-index: 0;
 }
 .coeur-bouton__contour {
