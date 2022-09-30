@@ -847,7 +847,7 @@ div.espace {
   text-overflow: ellipsis;
   white-space: nowrap;
   padding: 15px;
-  font-family: Roboto, arial, comic;
+  font-family: Roboto;
   font-size: 16px;
   line-height: 22px;
 }
@@ -862,7 +862,7 @@ div.espace {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: Roboto, arial, comic;
+  font-family: Roboto;
 }
 .etiquette-principale__prix {
   display: flex;
